@@ -11,6 +11,14 @@ import org.openqa.selenium.support.FindBy;
 
 import bt.hw.fehwat.PageObject;
 
+/**
+ * PropertyResultsPage extends PageObject class 
+ * and represents the web page elements for the result page.
+
+ * @author      Bruno Tavares
+ * @since       1.0
+ */
+
 public class PropertyResultsPage extends PageObject {
 
 	@FindBy(id = "fabResultsContainer")
@@ -30,6 +38,9 @@ public class PropertyResultsPage extends PageObject {
 
 	private SortOptions sortOptions;
 
+	/**
+	 * Enumeration that represents the sort options
+	 */
 	public enum Options {
 		PRICE, NAME, RATING, DISTANCE;
 	}
@@ -42,6 +53,14 @@ public class PropertyResultsPage extends PageObject {
 		return !hostels.isEmpty();
 	}
 
+	/**
+	 * Returns the PropertyResultsPage  
+	 * sorted by the option selected
+	 * <p>
+	 *
+	 * @param  option defines the sort option operation
+	 * @return PropertyResultsPage with page sorted by the option selected
+	  */
 	public PropertyResultsPage sort(Options option) {
 		sort.click();
 
@@ -70,6 +89,14 @@ public class PropertyResultsPage extends PageObject {
 		return new PropertyResultsPage(driver);
 	}
 
+	/**
+	 * Returns if the results list is sorted by
+	 * selected option
+	 * <p>
+	 * 
+	 * @param option for sorted by
+	 * @return true or false 
+	 */
 	public boolean isSortedBy(Options option) {
 
 		List<String> list = new ArrayList<String>(hostels.size());
