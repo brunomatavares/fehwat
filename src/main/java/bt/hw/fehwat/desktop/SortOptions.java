@@ -6,6 +6,14 @@ import org.openqa.selenium.support.FindBy;
 
 import bt.hw.fehwat.PageObject;
 
+/**
+ * SearchPage extends PageObject class 
+ * and represents the web page elements for the sort operation.
+
+ * @author      Bruno Tavares
+ * @since       1.0
+ */
+
 public class SortOptions extends PageObject {
 
     @FindBy(id="sortByPrice")
@@ -24,18 +32,30 @@ public class SortOptions extends PageObject {
         super(driver);
     }
 
+    /**
+     * Sort by price
+     */
     public void sortByPrice() {
         sortByPrice.click();
     }
 
+    /**
+     * Sort by rating
+     */
     public void sortByRating() {
         sortByRating.click();
     }
     
+    /**
+     * Sort by distance
+     */
     public void sortByDistance() {
         sortByDistance.click();
     }
 
+    /**
+     * Sort by name
+     */
     public void sortByName() {
         sortByName.click();
     }

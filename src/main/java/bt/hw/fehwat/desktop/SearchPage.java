@@ -11,6 +11,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import bt.hw.fehwat.PageObject;
 
+/**
+ * SearchPage extends PageObject class 
+ * and represents the web page elements for the search page.
+
+ * @author      Bruno Tavares
+ * @since       1.0
+ */
+
 public class SearchPage extends PageObject {
 
 	@FindBy(id="home-search-keywords")
@@ -29,6 +37,12 @@ public class SearchPage extends PageObject {
 		return search.isDisplayed();
 	}
 	
+	/**
+	 * Set the text in search textbox 
+	 * 
+	 * @param text string for searching content
+	 */
+	
 	public void search(final String text){
 		this.search.clear();
 		this.search.sendKeys(text);
@@ -41,6 +55,11 @@ public class SearchPage extends PageObject {
         });
 	}
 	
+	/**
+	 * Executes the search request
+	 * 
+	 * @return PropertyResultsPage
+	 */
 	public PropertyResultsPage search(){
 		search.submit();
 		try {
