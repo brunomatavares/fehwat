@@ -8,11 +8,17 @@ import java.util.concurrent.TimeUnit;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class WebUITest {
+	
+	protected final String URL_HOSTELWORLD = "https://www.hostelworld.com/";
+	protected final Dimension SMALL_DIMENSION = new Dimension(412, 732);
+	protected final Dimension MEDIUM_DIMENSION = new Dimension(768, 1024);
+	
 	protected static WebDriver driver;
 	
 	@BeforeClass

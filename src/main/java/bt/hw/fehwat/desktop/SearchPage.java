@@ -14,13 +14,18 @@ import bt.hw.fehwat.PageObject;
 public class SearchPage extends PageObject {
 
 	@FindBy(id="home-search-keywords")
-	private WebElement search;
+	protected WebElement search;
 
 	public SearchPage(WebDriver driver) {
 		super(driver);
 	}
 
 	public boolean isInitialized() {
+		try {
+			TimeUnit.SECONDS.sleep(5);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		return search.isDisplayed();
 	}
 	
